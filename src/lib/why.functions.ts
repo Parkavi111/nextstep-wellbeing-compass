@@ -9,7 +9,7 @@ export const getWhy = createServerFn({ method: "POST" })
   })
   .handler(async ({ data }) => {
     const { answers, step } = data;
-    const key = process.env.ANTHROPIC_API_KEY;
+    const key = process.env['ANTHROPIC_API_KEY'];
     if (!key) return { why: fallbackWhy(answers, step) };
     try {
       const res = await fetch("https://api.anthropic.com/v1/messages", {

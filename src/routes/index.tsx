@@ -44,7 +44,7 @@ function Index() {
   };
 
   const answer = (v: string) => {
-    const next = { ...answers, [QUESTIONS[i].key]: v } as Answers;
+    const next = { ...answers, [QUESTIONS[i]!.key]: v } as Answers;
     setAnswers(next);
     if (i < QUESTIONS.length - 1) setI(i + 1);
     else setScreen("text");
@@ -95,9 +95,9 @@ function Index() {
                 <div key={n} className={`h-1.5 flex-1 rounded-full ${n <= i ? "bg-primary" : "bg-muted"}`} />
               ))}
             </div>
-            <h2 className="font-display text-3xl leading-snug text-foreground">{QUESTIONS[i].q}</h2>
+            <h2 className="font-display text-3xl leading-snug text-foreground">{QUESTIONS[i]!.q}</h2>
             <div className="flex flex-col gap-3">
-              {QUESTIONS[i].opts.map((o) => (
+              {QUESTIONS[i]!.opts.map((o) => (
                 <button key={o} className="btn-option" onClick={() => answer(o)}>{o}</button>
               ))}
             </div>
