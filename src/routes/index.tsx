@@ -169,7 +169,7 @@ function Index() {
             <p className="text-muted-foreground">You don't have to figure this out alone. A trained counselor can listen.</p>
             <button className="btn-calm">Talk to a counselor now</button>
             <p className="rounded-2xl bg-muted p-4 text-foreground">
-              Helpline: <span className="font-semibold">[Helpline number]</span>
+              Tele-MANAS (India, free, 24x7): <span className="font-semibold">14416</span>
             </p>
             <button className="text-sm text-muted-foreground underline" onClick={restart}>Go back to start</button>
           </section>
