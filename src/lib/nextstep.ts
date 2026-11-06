@@ -13,6 +13,9 @@ export const OPTIONS = [
 ] as const;
 export type Option = (typeof OPTIONS)[number];
 
+export const HELPLINE_NAME = "Tele-MANAS (India, free, 24x7)";
+export const HELPLINE_NUMBER = "14416";
+
 const CRISIS_WORDS = [
   "suicide",
   "suicidal",

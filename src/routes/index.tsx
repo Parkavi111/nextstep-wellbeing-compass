@@ -1,7 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { OPTIONS, needsHumanSupport, pickStep, type Answers, type Option } from "@/lib/nextstep";
+import {
+  HELPLINE_NAME,
+  HELPLINE_NUMBER,
+  OPTIONS,
+  needsHumanSupport,
+  pickStep,
+  type Answers,
+  type Option,
+} from "@/lib/nextstep";
 import { getWhy } from "@/lib/why.functions";
 
 export const Route = createFileRoute("/")({
@@ -169,7 +177,7 @@ function Index() {
             <p className="text-muted-foreground">You don't have to figure this out alone. A trained counselor can listen.</p>
             <button className="btn-calm">Talk to a counselor now</button>
             <p className="rounded-2xl bg-muted p-4 text-foreground">
-              Helpline: <span className="font-semibold">[Helpline number]</span>
+              {HELPLINE_NAME}: <span className="font-semibold">{HELPLINE_NUMBER}</span>
             </p>
             <button className="text-sm text-muted-foreground underline" onClick={restart}>Go back to start</button>
           </section>

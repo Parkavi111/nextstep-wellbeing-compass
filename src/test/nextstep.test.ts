@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { needsHumanSupport } from "@/lib/nextstep";
+import { HELPLINE_NAME, HELPLINE_NUMBER, needsHumanSupport } from "@/lib/nextstep";
+
+describe("helpline shown on the safety screen", () => {
+  it("is Tele-MANAS (India, free, 24x7): 14416", () => {
+    expect(`${HELPLINE_NAME}: ${HELPLINE_NUMBER}`).toBe("Tele-MANAS (India, free, 24x7): 14416");
+  });
+});
 
 describe("human support rule", () => {
   it("triggers on crisis words", () => {
